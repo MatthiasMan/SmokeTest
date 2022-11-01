@@ -16,12 +16,16 @@ afterAll(async () => {
 
 test("myFirstTest", async () => {
   const page = await context.newPage();
-  await page.goto("http://localhost:4200/", { waitUntil: "domcontentloaded" });
-  await page.click('text="CLI Documentation"');
-  await page.click(".material-icons");
-  await qawolf.scroll(page, "html", { x: 0, y: 124 });
-  await page.click("button:nth-of-type(2)");
-  await page.click('text="New Component"');
-  await page.click('text="Run and Watch Tests"');
-  await page.click('text="Add Dependency"');
+  await page.goto("https://matthiasman.github.io/SmokeTest/GameOfLife/dest_Build/html/index.html", { waitUntil: "domcontentloaded" });
+  await page.click("#rowInput");
+  await page.fill("#rowInput", "30");
+  await page.click("#colInput");
+  await page.fill("#colInput", "50");
+  await page.click("#setSizeButton");
+  await qawolf.scroll(page, "html", { x: 0, y: 672 });
+  await page.click("#randomButton");
+  await page.click("#runButton");
+  await page.click("#pauseButton");
+  await page.click("#clearButton");
+  await qawolf.scroll(page, "html", { x: 0, y: 0 });
 });

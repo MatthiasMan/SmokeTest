@@ -1,7 +1,6 @@
 {
   "name": "smoketest1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,14 @@
   },
   "dependencies": {
     "ng": "^0.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatthiasMan/SmokeTest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatthiasMan/SmokeTest/issues"
+  },
+  "homepage": "https://github.com/MatthiasMan/SmokeTest#readme",
+  "description": ""
 }
