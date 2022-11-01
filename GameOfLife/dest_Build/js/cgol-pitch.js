@@ -138,10 +138,10 @@ class cgolpitchGridEditor {
     }
     onRandomField() {
 
-        var di = document.getElementById("123");
+        //var di = document.getElementById("123");
 
-        var di2 = document.getElementById("runButton");
-        di.removeChild(di2);
+        //var di2 = document.getElementById("runButton");
+        //di.removeChild(di2);
 
         cgolpitchGridEditor.onClearGrid();
 
