@@ -27,5 +27,4 @@ test("myFirstTest", async () => {
   await page.click("#runButton");
   await page.click("#pauseButton");
   await page.click("#clearButton");
-  await qawolf.scroll(page, "html", { x: 0, y: 0 });
 });
