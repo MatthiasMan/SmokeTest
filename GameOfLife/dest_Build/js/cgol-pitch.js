@@ -73,6 +73,7 @@ class cgolpitch extends HTMLElement {
 class cgolpitchGridEditor {
     onSetSize() {
         running = false;
+        throw new Error();
         var cGrid = document.getElementById("containerGrid");
         //var cGrid = that.shadowRoot.getElementById('cgollGrid');
         if (cGrid == null)
@@ -81,6 +82,7 @@ class cgolpitchGridEditor {
             cGrid.removeChild(cGrid.childNodes.item(0));
         cgolpitchGridEditor.createGameField(function(butto, y, x) {
             butto.setAttribute("class", "notAliveYet");
+
         });
     }
     onLevelInput() {
@@ -137,21 +139,16 @@ class cgolpitchGridEditor {
     }
     onRandomField() {
         cgolpitchGridEditor.onClearGrid();
-
-        var millisecondsToWait = 5000;
-setTimeout(function() {
-    for (var index = 0; index < howManyRows; index++) {
-        for (var index2 = 0; index2 < howManyColumns; index2++) {
-            var alive = Math.round(Math.random());
-            if (alive == 1)
-                grid[index][index2].setAttribute("class", "isAlive");
-            else
-                grid[index][index2].setAttribute("class", "notAliveYet");
-        }
-    }
-}, millisecondsToWait);
-
         
+        for (var index = 0; index < howManyRows; index++) {
+            for (var index2 = 0; index2 < howManyColumns; index2++) {
+                var alive = Math.round(Math.random());
+                if (alive == 1)
+                    grid[index][index2].setAttribute("class", "isAlive");
+                else
+                    grid[index][index2].setAttribute("class", "notAliveYet");
+            }
+        }
     }
     static onClearGrid() {
         if (running)
