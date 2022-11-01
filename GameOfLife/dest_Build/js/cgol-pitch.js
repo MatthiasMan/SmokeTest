@@ -73,7 +73,6 @@ class cgolpitch extends HTMLElement {
 class cgolpitchGridEditor {
     onSetSize() {
         running = false;
-        throw new Error();
         var cGrid = document.getElementById("containerGrid");
         //var cGrid = that.shadowRoot.getElementById('cgollGrid');
         if (cGrid == null)
@@ -138,7 +137,15 @@ class cgolpitchGridEditor {
         });
     }
     onRandomField() {
+
+        var di = document.getElementById("123");
+
+        var di2 = document.getElementById("runButton");
+        di.removeChild(di2);
+
         cgolpitchGridEditor.onClearGrid();
+
+
         
         for (var index = 0; index < howManyRows; index++) {
             for (var index2 = 0; index2 < howManyColumns; index2++) {
