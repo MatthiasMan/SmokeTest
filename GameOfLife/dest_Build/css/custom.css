@@ -1,0 +1,108 @@
+.notAliveYet {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #4a5204
+}
+
+.isAlive,
+.wasAlive {
+    background-color: #4a5204;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #000
+}
+
+.isAlive {
+    background-color: #c8ff00
+}
+
+div,
+h1 {
+    text-align: center
+}
+
+a,
+h1 {
+    text-shadow: -1px 0 #c8ff00, 0 1px #c8ff00, 1px 0 #c8ff00, 0 -1px #c8ff00
+}
+
+a {
+    font-weight: 700
+}
+
+div {
+    margin: 0;
+    padding: 0;
+    width: 100%
+}
+
+button .a {
+    text-decoration: none;
+    font-family: Arial;
+    display: block
+}
+
+.bigInput {
+    width: 50vw;
+    height: 30vw
+}
+
+.bigInput,
+button,
+input {
+    border: 1px solid #000
+}
+
+.bigInput,
+input {
+    background-color: #000;
+    color: #c8ff00
+}
+
+button {
+    margin: 5px 3px;
+    background-color: #c8ff00
+}
+
+.morePlace {
+    margin-top: 1vh
+}
+
+.muchMorePlace {
+    margin-top: 2vh
+}
+
+body {
+    background: linear-gradient(-90deg, #000, #4a5204, #c8ff00, #000, #4a5204, #c8ff00, #4a5204, #000, #4a5204, #c8ff00, #000)
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: 3vh;
+    background: #000;
+    outline: 0;
+    opacity: .7;
+    -webkit-transition: .2s;
+    transition: opacity .2s
+}
+
+.slider:hover {
+    opacity: 1
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5vw;
+    height: 3vh;
+    background: #c8ff00;
+    cursor: pointer
+}
+
+.slider::-moz-range-thumb {
+    width: 1.5vw;
+    height: 3vh;
+    background: #c8ff00;
+    cursor: pointer
+}
