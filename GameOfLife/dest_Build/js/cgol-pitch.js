@@ -137,15 +137,21 @@ class cgolpitchGridEditor {
     }
     onRandomField() {
         cgolpitchGridEditor.onClearGrid();
-        for (var index = 0; index < howManyRows +100; index++) {
-            for (var index2 = 0; index2 < howManyColumns; index2++) {
-                var alive = Math.round(Math.random());
-                if (alive == 1)
-                    grid[index][index2].setAttribute("class", "isAlive");
-                else
-                    grid[index][index2].setAttribute("class", "notAliveYet");
-            }
+
+        var millisecondsToWait = 5000;
+setTimeout(function() {
+    for (var index = 0; index < howManyRows; index++) {
+        for (var index2 = 0; index2 < howManyColumns; index2++) {
+            var alive = Math.round(Math.random());
+            if (alive == 1)
+                grid[index][index2].setAttribute("class", "isAlive");
+            else
+                grid[index][index2].setAttribute("class", "notAliveYet");
         }
+    }
+}, millisecondsToWait);
+
+        
     }
     static onClearGrid() {
         if (running)
